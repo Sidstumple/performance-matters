@@ -17,19 +17,33 @@ When I started the page took about 23 seconds to load and it got a google pagesp
 Adding inline critical css to `<head>` and moving the rest of the css to just before the `</body>` tag. It didn't immediately save a lot of time but it did boost Google Pagespeeds rating up 10 points. It is quite labor-intensive, because it has to be added inline to each HTML document. Also when you change one CSS line it has to be rendered again. 
 There are some ways to automate this process but it was to complicated to figure this out by myself in a week.
 <br>
-![initial bootstrap performance google pagespeeds](screenshots/pagespeeds/aftercriticalcss.png)
-![initial bootstrap performance network](screenshots/network/aftercriticalcss.png)
+![after critical CSS bootstrap performance google pagespeeds](screenshots/pagespeeds/aftercriticalcss.png)
+![after critical CSS bootstrap performance network](screenshots/network/aftercriticalcss.png)
 
-## Compressing JavaScript and CSS to zipfiles
+### Compressing JavaScript and CSS to zipfiles
 This was completely new to me but it actually saved three seconds of load time and also boosted the Google Pagespeeds rating with ten points. It compresses all JavaScript and CSS files to zipfiles, which significantly saves loadtime.
 Figuring out how to actually do this was impossible without the help of Janno, I do hope next week things with Node.js will become a little more clear.
 <br>
-![initial bootstrap performance google pagespeeds](screenshots/pagespeeds/aftercompression.png)
-![initial bootstrap performance network](screenshots/network/aftercompression.png)
-![initial bootstrap performance network](screenshots/network/aftercompressingimages.png)
+Code for adding compress to `server.js`:
+```
+const compression = require('compression');
+const app = express();
+app.use(compression());
+```
+<br>
+![after compressing bootstrap performance google pagespeeds](screenshots/pagespeeds/aftercompression.png)
+![after compressing bootstrap performance network](screenshots/network/aftercompression.png)
 
+### Resizing images
+Resizing the images had a huge impact on the loading time, not so much on Google Pagespeeds. This didn't come as a big surprise, in the lectures of this course Declan had already mentioned images usually takeup a lot of loading time.
+<br>
+![after resizing images bootstrap performance google pagespeeds](screenshots/pagespeeds/aftercompressingimages.png)
+![after resizing images bootstrap performance network](screenshots/network/aftercompressingimages.png)
 
+### Minimizing JavaScript & CSS files
 
-* Minimizing CSS documents boosts google pagespeed's rating a lot.
+Minimizing CSS documents boosts google pagespeed's rating a lot.
 
-* Compressing files makes the website much faster and is very easy to do via the terminal and editing server.js.
+<br>
+![after minimizing bootstrap performance google pagespeeds](screenshots/pagespeeds/afterminimizing.png)
+![after minimizing bootstrap performance network](screenshots/network/afterminimizing.png)
