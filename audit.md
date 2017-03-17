@@ -45,5 +45,5 @@ Resizing the images had a huge impact on the loading time, not so much on Google
 Minimizing CSS documents boosts google pagespeed's rating a lot.
 
 <br>
-![after minimizing bootstrap performance google pagespeeds](screenshots/pagespeeds/afterminimizing.png)
-![after minimizing bootstrap performance network](screenshots/network/afterminimizing.png)
+![minimizing bootstrap performance google pagespeeds](screenshots/pagespeeds/afterminimizing.png)
+![minimizing bootstrap performance network](screenshots/network/afterminimizing.png)
