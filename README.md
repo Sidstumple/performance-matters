@@ -1,4 +1,6 @@
 # Performance matters
+All changes are merged in [my develop branch](https://github.com/Sidstumple/performance-matters/tree/develop).
+All my audits are documented in this [audit.md](https://github.com/Sidstumple/performance-matters/blob/develop/audit.md).
 
 ## Project setup
 
