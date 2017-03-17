@@ -1,5 +1,8 @@
 # Performance matters
 
+All changes are merged in [my develop branch](https://github.com/Sidstumple/performance-matters/tree/develop).
+All my audits are documented in this [audit.md](https://github.com/Sidstumple/performance-matters/blob/develop/audit.md).
+
 ## Project setup
 
 This project serves an adapted version of the [Bootstrap documentation website](http://getbootstrap.com/). It is based on the [github pages branche of Bootstrap](https://github.com/twbs/bootstrap/tree/gh-pages). 
